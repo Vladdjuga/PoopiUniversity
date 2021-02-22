@@ -1,0 +1,24 @@
+﻿@{
+    ViewBag.Title = "About";
+    ViewBag.Message = "You can improve yourself in our university.";
+}
+<h2>@ViewBag.Title.</h2>
+<h3>@ViewBag.Message</h3>
+
+<h3>Faculties : </h3>
+<div class="list-group">
+    <a onmouseover="onMouseOverListItem(this)" onmouseout="onMouseLeaveListItem(this)" href="#" class="list-group-item list-group-item-action">Frontend programmer</a>
+    <a onmouseover="onMouseOverListItem(this)" onmouseout="onMouseLeaveListItem(this)" href="#" class="list-group-item list-group-item-action">Backend programmer</a>
+    <a onmouseover="onMouseOverListItem(this)" onmouseout="onMouseLeaveListItem(this)" href="#" class="list-group-item list-group-item-action">Web-design</a>
+    <a onmouseover="onMouseOverListItem(this)" onmouseout="onMouseLeaveListItem(this)" href="#" class="list-group-item list-group-item-action">Art-design</a>
+    <a onmouseover="onMouseOverListItem(this)" onmouseout="onMouseLeaveListItem(this)" href="#" class="list-group-item list-group-item-action">Network Administrator</a>
+</div>
+
+<script>
+    function onMouseOverListItem(item) {
+        item.classList.add("active-red");
+    }
+    function onMouseLeaveListItem(item) {
+        item.classList.remove("active-red");
+    }
+</script>

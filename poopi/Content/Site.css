@@ -1,0 +1,121 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+    font-family: "Cute Sans";
+}
+
+@font-face {
+    font-family: "Cute Sans";
+    src: url("../fonts/fontleroybrown.regular.ttf");
+}
+
+body, html {
+    height: 100%;
+}
+
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+.navbar-luqid {
+    background-color: #ff7777;
+    border: none;
+}
+
+.image-brand {
+    width: 15%;
+}
+
+.nav-link-white {
+    color: white !important;
+}
+
+    .nav-link-white :hover {
+        color: rgba(255,255,255,0.5) !important;
+    }
+
+.div-news {
+    height: 50vh;
+    background-image: url(../Image/adriana-patino.png);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+.block-text-news {
+    background-color: #F1A79E;
+    width: 70%;
+    display: flex;
+    padding: 2%;
+    margin-top: 30%;
+    color: #F6DCDA;
+}
+
+.text-flex {
+    font-style: italic;
+}
+
+.black-logo-centered {
+    width: 10vh;
+}
+
+.sm-intresting {
+    margin-top: 6%;
+    padding: 1%;
+    text-align: center;
+}
+
+.active-red, .active-red:hover {
+    color: white !important;
+    background-color: #ff7777 !important;
+}
+
+.Google {
+    background-image: url(../Image/btn_google_signin_dark_normal_web.png);
+    width: 191px;
+    height: 46px;
+    background-size: cover;
+}
+
+    .Google:hover {
+        background-image: url(../Image/btn_google_signin_dark_focus_web.png);
+    }
+
+    .Google:active {
+        background-image: url(../Image/btn_google_signin_dark_pressed_web.png);
+    }
+
+.profile-image {
+    width: 15vh;
+    height: 15vh;
+    object-fit: cover;
+    border: 2px solid #ff7777;
+    border-radius:5px;
+}
+.dl-spacing>dd{
+    margin-bottom:3%;
+}
+.user-name {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+.admin-student-pic {
+    width: 10vh;
+    height: 10vh;
+    object-fit: cover;
+    border: 2px solid rgb(0,0,0);
+    border-radius: 5px;
+}

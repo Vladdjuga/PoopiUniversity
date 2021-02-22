@@ -1,0 +1,23 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="row">
+    <div class="div-news">
+        <div class="block-text-news row">
+            <div class="col-lg-12">
+                <h1>Vlad`s University</h1>
+            </div>
+            <div class="col-lg-12 text-flex">
+                <span class="local-text">The University of Toronto is home to some of the world’s top faculty, students, alumni and staff. U of T Celebrates recognizes their award-winning accomplishments.</span>
+            </div>
+        </div>
+    </div>
+    <div class="sm-intresting">
+        <img class="black-logo-centered" src="~/Image/logo-black.png" />
+        <div>
+            <h1>You can start studying right now!</h1>
+            <h2>Tap @Html.ActionLink("here", "Register", "Account", routeValues: null, htmlAttributes: new { id = "registerLink" }) to register!</h2>
+        </div>
+    </div>
+</div>
