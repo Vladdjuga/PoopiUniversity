@@ -15,6 +15,6 @@ namespace poopi.Entities.Models
         [Required]
         public int Course { get; set; }
 
-        public virtual IEnumerable<Student> Students { get; set; }
+        public virtual ICollection<Student> Students { get; set; }
     }
 }

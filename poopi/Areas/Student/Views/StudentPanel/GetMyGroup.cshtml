@@ -27,7 +27,7 @@
         </dd>
 
     </dl>
-    <table>
+    <table class="table">
         @if (Model.Students != null)
         {
             foreach (var item in Model.Students)
@@ -40,7 +40,7 @@
                         @Html.DisplayFor(modelItem => item.ApplicationUser.Email)
                     </td>
                     <td>
-                        <img src="~/Image/@item.Image" />
+                        <img class="small-pic" src="~/Image/@item.Image" />
                     </td>
                 </tr>
             }
@@ -48,6 +48,5 @@
     </table>
 </div>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
     @Html.ActionLink("Back to List", "Index")
 </p>

@@ -75,7 +75,9 @@ namespace poopi.Areas.Admin.Controllers
         public ActionResult Deny(int id)
         {
             Request request = _context.Requests.Find(id);
-            request.Student.GroupId = request.Group.Id;
+            if (request.Group.Students == null)
+                request.Group.Students = new List<Entities.Models.Student>();
+            _context.Groups.Find(request.GroupId).Students.Add(request.Student);
             UserManager.AddToRole(request.Student.ApplicationUser.Id,"Student");
             _context.Requests.Remove(request);
             _context.SaveChanges();

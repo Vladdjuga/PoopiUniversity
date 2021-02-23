@@ -170,6 +170,8 @@
     <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
     <Compile Include="Areas\Admin\Controllers\AdminAccountController.cs" />
     <Compile Include="Areas\Admin\Controllers\AdminPanelController.cs" />
+    <Compile Include="Areas\Student\Controllers\StudentAccountController.cs" />
+    <Compile Include="Areas\Student\Controllers\StudentManageController.cs" />
     <Compile Include="Areas\Student\Controllers\StudentPanelController.cs" />
     <Compile Include="Areas\Student\StudentAreaRegistration.cs" />
     <Compile Include="Controllers\AccountController.cs" />
@@ -192,6 +194,14 @@
     <Compile Include="Migrations\202102221347460_requests.cs" />
     <Compile Include="Migrations\202102221347460_requests.Designer.cs">
       <DependentUpon>202102221347460_requests.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202102231339471_ASDADAS.cs" />
+    <Compile Include="Migrations\202102231339471_ASDADAS.Designer.cs">
+      <DependentUpon>202102231339471_ASDADAS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202102231408241_asaas.cs" />
+    <Compile Include="Migrations\202102231408241_asaas.Designer.cs">
+      <DependentUpon>202102231408241_asaas.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -238,6 +248,8 @@
     <Content Include="Areas\Admin\Views\AdminPanel\Edit.cshtml" />
     <Content Include="Areas\Admin\Views\AdminPanel\EditStudent.cshtml" />
     <Content Include="Areas\Student\Views\StudentPanel\GetMyGroup.cshtml" />
+    <Content Include="Areas\Student\Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Areas\Student\Views\StudentManage\Index.cshtml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -291,6 +303,7 @@
     <Folder Include="Areas\Admin\Views\Account\" />
     <Folder Include="Areas\Admin\Views\AdminAccount\" />
     <Folder Include="Areas\Student\Data\" />
+    <Folder Include="Areas\Student\Views\StudentAccount\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -311,6 +324,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202102221347460_requests.resx">
       <DependentUpon>202102221347460_requests.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202102231339471_ASDADAS.resx">
+      <DependentUpon>202102231339471_ASDADAS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202102231408241_asaas.resx">
+      <DependentUpon>202102231408241_asaas.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

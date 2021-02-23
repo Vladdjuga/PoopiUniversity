@@ -12,6 +12,6 @@ namespace poopi.Models
         public int Id { get; set; }
         public string Name { get; set; }
         public int Course { get; set; }
-        public IEnumerable<Student> Students { get; internal set; }
+        public ICollection<Student> Students { get; internal set; }
     }
 }
