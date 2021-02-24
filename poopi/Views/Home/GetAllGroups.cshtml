@@ -1,10 +1,10 @@
 ﻿@model IEnumerable<poopi.Models.GroupViewModel>
 
 @{
-    ViewBag.Title = "GetAllGroups";
+    ViewBag.Title = "Groups";
 }
 
-<h2>GetAllGroups</h2>
+<h2>Groups</h2>
 
 <p>
     @Html.ActionLink("Create New", "Create")
@@ -29,7 +29,7 @@
             @Html.DisplayFor(modelItem => item.Course)
         </td>
         <td>
-            @Html.ActionLink("Send request", "Request", new { id=item.Id })
+            @Html.ActionLink("Send request", "Request", new { id=item.Id },new { @class="guest-link"})
         </td>
     </tr>
 }

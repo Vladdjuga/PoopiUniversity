@@ -72,7 +72,7 @@ namespace poopi.Areas.Admin.Controllers
                 _userManager = value;
             }
         }
-        public ActionResult Deny(int id)
+        public ActionResult Accept(int id)
         {
             Request request = _context.Requests.Find(id);
             if (request.Group.Students == null)

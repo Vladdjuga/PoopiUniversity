@@ -13,8 +13,15 @@ namespace poopi.Models
         public bool TwoFactor { get; set; }
         public bool BrowserRemembered { get; set; }
         public string Image { get; set; }
+        public string FullName { get; set; }
+        public string Email { get; set; }
     }
-
+    public class IndexEditViewModel
+    {
+        public string FullName { get; set; }
+        public string Email { get; set; }
+    }
+ 
     public class ManageLoginsViewModel
     {
         public IList<UserLoginInfo> CurrentLogins { get; set; }

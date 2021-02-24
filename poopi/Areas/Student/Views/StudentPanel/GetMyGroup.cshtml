@@ -1,13 +1,12 @@
 ﻿@model poopi.Models.GroupViewModel
 
 @{
-    ViewBag.Title = "GetMyGroup";
+    ViewBag.Title = "My group";
 }
 
-<h2>GetMyGroup</h2>
+<h2>My group</h2>
 
 <div>
-    <h4>GroupViewModel</h4>
     <hr />
     <dl class="dl-horizontal">
         <dt>
@@ -48,5 +47,5 @@
     </table>
 </div>
 <p>
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Back", "Index", null, new { @class = "link-student" })
 </p>

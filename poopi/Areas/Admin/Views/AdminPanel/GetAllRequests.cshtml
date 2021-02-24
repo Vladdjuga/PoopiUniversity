@@ -1,10 +1,10 @@
 ﻿@model IEnumerable<poopi.Models.RequestViewModel>
 
 @{
-    ViewBag.Title = "GetAllRequests";
+    ViewBag.Title = "Requests";
 }
 
-<h2>GetAllRequests</h2>
+<h2>Requests</h2>
 
 <table class="table">
     <tr>
@@ -26,7 +26,7 @@
             @Html.DisplayFor(modelItem => item.GroupName)
         </td>
         <td>
-            @Html.ActionLink("Deny", "Deny", new { id=item.Id })
+            @Html.ActionLink("Accept", "Accept", new { id=item.Id }, new { @class = "admin-link" })
         </td>
     </tr>
 }

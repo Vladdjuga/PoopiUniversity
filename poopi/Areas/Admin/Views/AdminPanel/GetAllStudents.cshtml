@@ -1,10 +1,10 @@
 ﻿@model IEnumerable<poopi.Models.StudentViewModel>
 
 @{
-    ViewBag.Title = "GetAllStudents";
+    ViewBag.Title = "Students";
 }
 
-<h2>GetAllStudents</h2>
+<h2>Students</h2>
 
 <table class="table">
     <tr>
@@ -38,8 +38,8 @@
             @Html.DisplayFor(modelItem => item.Email)
         </td>
         <td>
-            @Html.ActionLink("Edit", "EditStudent", new { id=item.Id }) |
-            @Html.ActionLink("Delete", "DeleteStudent", new { id=item.Id })
+            @Html.ActionLink("Edit", "EditStudent", new { id=item.Id }, new { @class = "admin-link" }) |
+            @Html.ActionLink("Delete", "DeleteStudent", new { id=item.Id }, new { @class = "admin-link" })
         </td>
     </tr>
 }

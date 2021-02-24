@@ -26,7 +26,18 @@
     <div class="form-group">
         @Html.LabelFor(m => m.Image, new { @class = "col-md-2 control-label" })
         <div class="col-md-10">
-            <input type="file" name="imagehttp" class="form-control"/>
+            @*<input type="file" name="imagehttp" class="form-control" />*@
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+            <div class="example-2">
+                <div class="form-group">
+                    <input type="file" name="imagehttp" id="file" class="input-file">
+                    <label for="file" class="btn btn-tertiary js-labelFile">
+                        <i class="icon fa fa-check"></i>
+                        <span class="js-fileName">Загрузить файл</span>
+                    </label>
+                </div>
+            </div>
         </div>
     </div>
     <div class="form-group">
@@ -43,8 +54,9 @@
     </div>
     <div class="form-group">
         <div class="col-md-offset-2 col-md-10">
-            <input type="submit" class="btn btn-default" value="Register" />
+            <input type="submit" class="btn btn-default guest-button" value="Register" />
         </div>
+
     </div>
 }
 

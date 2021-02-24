@@ -250,6 +250,8 @@
     <Content Include="Areas\Student\Views\StudentPanel\GetMyGroup.cshtml" />
     <Content Include="Areas\Student\Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Areas\Student\Views\StudentManage\Index.cshtml" />
+    <Content Include="Areas\Student\Views\StudentManage\Edit.cshtml" />
+    <Content Include="Areas\Student\Views\StudentManage\ChangePassword.cshtml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />

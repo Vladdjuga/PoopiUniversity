@@ -137,3 +137,116 @@ textarea {
     border: 2px solid #73D4F6;
     border-radius: 5px;
 }
+.link-student {
+    color: #73D4F6 !important;
+    text-decoration: none !important;
+    padding: 0.5%;
+    border-radius: 5px;
+    transition: 0.2s;
+}
+    .link-student:hover {
+        box-shadow: 0 0 5px #73D4F6;
+        background-color: #73D4F6;
+        color: white !important;
+    }
+.guest-link {
+    color: #ff7777 !important;
+    text-decoration: none !important;
+    padding: 0.5%;
+    border-radius: 5px;
+    transition: 0.2s;
+}
+
+    .guest-link:hover {
+        box-shadow: 0 0 5px #ff7777;
+        background-color: #ff7777;
+        color: white !important;
+    }
+.guest-button {
+    outline: none;
+    color: white;
+    background-color: #ff7777;
+    border:none;
+    transition:0.2s;
+}
+    .guest-button:hover {
+        outline: none;
+        color: #ff7777;
+        background-color: white;
+        box-shadow: 0 0 5px #ff7777;
+    }
+.navbar-violet {
+    background-color: #7050FF;
+}
+.navbar{
+    border:none !important;
+}
+.admin-link {
+    color: #7050FF !important;
+    text-decoration: none !important;
+    padding: 0.5%;
+    border-radius: 5px;
+    transition: 0.2s;
+}
+
+    .admin-link:hover {
+        box-shadow: 0 0 5px #7050FF;
+        background-color: #7050FF;
+        color: white !important;
+    }
+
+.admin-button {
+    outline: none;
+    color: white;
+    background-color: #7050FF;
+    border: none;
+    transition: 0.2s;
+}
+
+    .admin-button:hover {
+        outline: none;
+        color: #7050FF;
+        background-color: white;
+        box-shadow: 0 0 5px #7050FF;
+    }
+.example-2 .btn-tertiary {
+    color: #555;
+    padding: 0 !important;
+    line-height: 40px;
+    display: block;
+    border: 2px solid #555
+}
+
+    .example-2 .btn-tertiary:hover, .example-2 .btn-tertiary:focus {
+        color: #888;
+        border-color: #888
+    }
+
+.example-2 .input-file {
+    width: .1px;
+    height: .1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1
+}
+
+    .example-2 .input-file + .js-labelFile {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        padding: 0 10px;
+        cursor: pointer
+    }
+
+        .example-2 .input-file + .js-labelFile .icon:before {
+            content: "\f093"
+        }
+
+        .example-2 .input-file + .js-labelFile.has-file .icon:before {
+            content: "\f00c";
+            color: #5AAC7B
+        }
+.col-pd-0{
+    padding:0 !important;
+}

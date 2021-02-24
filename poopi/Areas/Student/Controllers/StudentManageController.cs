@@ -1,9 +1,12 @@
 ﻿using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
+using poopi.Helpers;
 using poopi.Models;
 using System;
 using System.Collections.Generic;
+using System.Drawing;
+using System.Drawing.Imaging;
 using System.Linq;
 using System.Net;
 using System.Threading.Tasks;
@@ -49,6 +52,7 @@ namespace poopi.Areas.Student.Controllers
             _context = new ApplicationDbContext();
         }
         ApplicationDbContext _context;
+        [Authorize(Roles = "Student")]
         public async Task<ActionResult> Index(ManageMessageId? message)
         {
             ViewBag.StatusMessage =
@@ -62,7 +66,6 @@ namespace poopi.Areas.Student.Controllers
 
             var userId = User.Identity.GetUserId();
             var student = _context.Users.Find(userId).Student;
-
             var model = new IndexViewModel
             {
                 HasPassword = HasPassword(),
@@ -70,9 +73,80 @@ namespace poopi.Areas.Student.Controllers
                 TwoFactor = await UserManager.GetTwoFactorEnabledAsync(userId),
                 Logins = await UserManager.GetLoginsAsync(userId),
                 BrowserRemembered = await AuthenticationManager.TwoFactorBrowserRememberedAsync(userId),
-                Image = student != null ? student.Image : "default.jpg"
+                Image = student != null ? student.Image : "default.jpg",
+                FullName=student.FullName,
+                Email=student.ApplicationUser.Email
             };
             return View(model);
+        }
+        private ApplicationSignInManager _signInManager;
+        public ApplicationSignInManager SignInManager
+        {
+            get
+            {
+                return _signInManager ?? HttpContext.GetOwinContext().Get<ApplicationSignInManager>();
+            }
+            private set
+            {
+                _signInManager = value;
+            }
+        }
+
+        [Authorize(Roles = "Student")]
+        public ActionResult ChangePassword()
+        {
+            return View();
+        }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<ActionResult> ChangePassword(ChangePasswordViewModel model)
+        {
+            if (!ModelState.IsValid)
+            {
+                return View(model);
+            }
+            var result = await UserManager.ChangePasswordAsync(User.Identity.GetUserId(), model.OldPassword, model.NewPassword);
+            if (result.Succeeded)
+            {
+                var user = await UserManager.FindByIdAsync(User.Identity.GetUserId());
+                if (user != null)
+                {
+                    await SignInManager.SignInAsync(user, isPersistent: false, rememberBrowser: false);
+                }
+                return RedirectToAction("Index", new { Message = ManageMessageId.ChangePasswordSuccess });
+            }
+            return View(model);
+        }
+        [Authorize(Roles = "Student")]
+        public ActionResult Edit()
+        {
+            return View();
+        }
+        [HttpPost]
+        [Authorize(Roles = "Student")]
+        public ActionResult Edit(IndexEditViewModel model, HttpPostedFileBase httpfile)
+        {
+            var user = _context.Users.Find(User.Identity.GetUserId());
+            string imagefile = Guid.NewGuid().ToString() + ".jpg";
+            string image = Server.MapPath(ConstantsSec.ImagePath) + "\\" + imagefile;
+            if (httpfile != null)
+            {
+                using (Bitmap bitmap = new Bitmap(httpfile.InputStream))
+                {
+                    var saved = ImageWorker.CreateImage(bitmap, 400, 400);
+                    if (saved != null)
+                    {
+                        saved.Save(image, ImageFormat.Jpeg);
+                    }
+                }
+            }
+            else imagefile = "default.jpg";
+            user.Student.Image = imagefile;
+            user.Email = model.Email;
+            _context.Students.FirstOrDefault(el => el.Id == user.Student.Id).FullName = model.FullName;
+            _context.SaveChanges();
+
+            return RedirectToAction("Index");
         }
     }
 }

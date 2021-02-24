@@ -2,10 +2,9 @@
 @{
     ViewBag.Title = "Manage";
 }
-<h2>@ViewBag.Title.</h2>
+<h2>Hello @Html.DisplayFor(model => model.FullName)!</h2>
 <p class="text-success">@ViewBag.StatusMessage</p>
 <div>
-    <h4>Change your account settings</h4>
     <hr />
     <dl class="dl-horizontal dl-spacing">
         <dt>
@@ -13,39 +12,38 @@
         </dt>
         <dd>
             <div class="col-lg-2">
-            <img class="profile-image-student" src="~/Image/@Model.Image" />
-                </div>
+                <img class="profile-image-student" src="~/Image/@Model.Image" />
+            </div>
             <div class="col-lg-10">
-            @using (Html.BeginForm("ChangePic", "StudentPanel", FormMethod.Post, new { @class = "form-horizontal", role = "form", enctype = "multipart/form-data" }))
-            {
-                <div class="form-group">
-                    <div class="col-lg-12">
-                        <input type="file" name="httpfile" class="form-control" />
-                    </div>
-                    <div class="col-lg-12">
-                        <input class="form-control" type="submit" value="Update" />
-                    </div>
-                </div>
-            }
-                </div>
+
+                @Html.ActionLink("Edit Profile", "Edit", null, new { @class = "link-student" })
+            </div>
         </dd>
         <dt>Password:</dt>
         <dd>
-            [
+
             @if (Model.HasPassword)
             {
-                @Html.ActionLink("Change your password", "ChangePassword")
+                @Html.ActionLink("Change your password", "ChangePassword", null, new { @class = "link-student" })
             }
             else
             {
-                @Html.ActionLink("Create", "SetPassword")
+                @Html.ActionLink("Create", "SetPassword", null, new { @class = "link-student" })
             }
-            ]
+
         </dd>
-        <dt>External Logins:</dt>
+        @*<dt>External Logins:</dt>
         <dd>
-            @Model.Logins.Count [
-            @Html.ActionLink("Manage", "ManageLogins") ]
+            @Model.Logins.Count
+            @Html.ActionLink("Manage", "ManageLogins", null, new { @class = "link-student" })
+        </dd>*@
+        <dt>Email:</dt>
+        <dd>
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+        <dt>Full name:</dt>
+        <dd>
+            @Html.DisplayFor(model => model.FullName)
         </dd>
     </dl>
 </div>

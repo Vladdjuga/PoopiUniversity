@@ -1,13 +1,13 @@
 ﻿@model IEnumerable<poopi.Models.GroupViewModel>
 
 @{
-    ViewBag.Title = "GetAllGroups";
+    ViewBag.Title = "Groups";
 }
 
-<h2>GetAllGroups</h2>
+<h2>Groups</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Create New", "Create",null,new { @class="admin-link"})
 </p>
 <table class="table">
     <tr>
@@ -29,8 +29,8 @@
             @Html.DisplayFor(modelItem => item.Course)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+            @Html.ActionLink("Edit", "Edit", new { id=item.Id },new { @class = "admin-link" }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Id },new { @class = "admin-link" })
         </td>
     </tr>
 }
