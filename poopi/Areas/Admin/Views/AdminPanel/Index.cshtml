@@ -1,7 +1,21 @@
-﻿
+﻿@model IEnumerable<poopi.Models.StudentViewModel>
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Home page";
 }
+<div class="row">
+    <h2>Dashboard</h2>
+    <h4>Last created users</h4>
 
-<h2>Index</h2>
-
+    @foreach (var item in Model)
+    {
+        <div class="col-lg-2 thumbnail thumb-profiles">
+            <a href="#">
+                <img class="image-link-admin" src="~/Image/@Html.DisplayFor(modelItem => item.Image)" alt="...">
+            </a>
+            <div>
+                <p class="fullname-profile-min">@Html.DisplayFor(modelItem => item.FullName)</p>
+                <p class="email-profile-min">@Html.DisplayFor(modelItem => item.Email)</p>
+            </div>
+        </div>
+    }
+</div>

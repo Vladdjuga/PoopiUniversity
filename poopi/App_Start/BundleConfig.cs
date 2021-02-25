@@ -20,11 +20,22 @@ namespace poopi
                         "~/Scripts/modernizr-*"));
 
             bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
-                      "~/Scripts/bootstrap.js"));
+                      "~/Scripts/bootstrap.js",
+                      "~/Scripts/dashboard-influencer.js",
+                      "~/Scripts/dashboard-finance.js",
+                      "~/Scripts/dashboard-ecommerce.js",
+                      "~/Scripts/dashboard-sales.js",
+                      "~/Scripts/jvectormap.custom.js",
+                      "~/Scripts/main-js.js",
+                      "~/Scripts/morris.js",
+                      "~/Scripts/Morrisjs.js",
+                      "~/Scripts/raphael.min.js"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
-                      "~/Content/Site.css"));
+                      "~/Content/Site.css",
+                      "~/Content/style.css",
+                      "~/Content/morris.css"));
         }
     }
 }

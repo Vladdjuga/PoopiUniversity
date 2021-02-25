@@ -250,3 +250,26 @@ textarea {
 .col-pd-0{
     padding:0 !important;
 }
+.card-body {
+    padding: 1.25rem;
+}
+.card-header {
+    padding: 1.25rem;
+}
+.image-link-admin {
+    width: 15vh;
+    height: 15vh !important;
+    object-fit: cover;
+    border-radius: 5px;
+}
+.thumb-profiles{
+    text-align:center;
+    padding:1%;
+}
+.fullname-profile-min {
+    font-size: 15pt;
+    margin: 0;
+}
+.email-profile-min {
+    font-size: 8pt;
+}

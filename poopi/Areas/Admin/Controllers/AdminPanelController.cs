@@ -23,7 +23,16 @@ namespace poopi.Areas.Admin.Controllers
         }
         public ActionResult Index()
         {
-            return View();
+            IEnumerable<StudentViewModel> students = _context.Students.Select(el => new StudentViewModel()
+            {
+                Email = el.ApplicationUser.Email,
+                FullName = el.FullName,
+                GroupName = el.Group.Name,
+                Image = el.Image
+            }).ToList();
+            students=students.Reverse();
+            students=students.Take(6);
+            return View(students);
         }
         [Authorize(Roles = "Admin")]
         public ActionResult GetAllStudents()

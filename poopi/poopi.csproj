@@ -219,6 +219,8 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\morris.css" />
+    <Content Include="Content\style.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -234,7 +236,6 @@
     <Content Include="Areas\Admin\Views\web.config" />
     <Content Include="Areas\Admin\Views\_ViewStart.cshtml" />
     <Content Include="Areas\Admin\Views\Shared\_Layout.cshtml" />
-    <Content Include="Areas\Admin\Views\AdminPanel\Index.cshtml" />
     <Content Include="Areas\Student\Views\web.config" />
     <Content Include="Areas\Student\Views\_ViewStart.cshtml" />
     <Content Include="Areas\Student\Views\Shared\_Layout.cshtml" />
@@ -252,7 +253,14 @@
     <Content Include="Areas\Student\Views\StudentManage\Index.cshtml" />
     <Content Include="Areas\Student\Views\StudentManage\Edit.cshtml" />
     <Content Include="Areas\Student\Views\StudentManage\ChangePassword.cshtml" />
+    <Content Include="Areas\Admin\Views\AdminPanel\Index.cshtml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
+    <Content Include="Scripts\dashboard-ecommerce.js" />
+    <Content Include="Scripts\dashboard-finance.js" />
+    <Content Include="Scripts\dashboard-influencer.js" />
+    <Content Include="Scripts\dashboard-sales.js" />
+    <Content Include="Scripts\gmaps.min.js" />
+    <Content Include="Scripts\google_map.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
     <Content Include="Scripts\jquery-3.4.1.slim.js" />
@@ -262,7 +270,12 @@
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\jvectormap.custom.js" />
+    <Content Include="Scripts\main-js.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Scripts\morris.js" />
+    <Content Include="Scripts\Morrisjs.js" />
+    <Content Include="Scripts\raphael.min.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
